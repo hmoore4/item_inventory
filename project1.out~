@@ -1,0 +1,116 @@
+This output is for a case with no errors:
+
+Welcome to Hunter's Shop!
+
+Inserting Basketball into inventory...
+Inserting Don Quixote into inventory...
+Inserting Chair into inventory...
+Inserting Hat into inventory...
+Inserting Hoop into inventory...
+Inserting Shampoo into inventory...
+
+Printing all items in our inventory:
+
+Product number: 15, Name: Shampoo, Product Category: Bathroom
+Product number: 10, Name: Hoop, Product Category: Sports
+Product number: 5, Name: Hat, Product Category: Clothes
+Product number: 3, Name: Chair, Product Category: Furniture
+Product number: 2, Name: Don Quixote, Product Category: Literature
+Product number: 1, Name: Basketball, Product Category: Sports
+
+Removing product with product number of 3...
+Removing product with product number of 15...
+
+Printing all items in our inventory:
+
+Product number: 10, Name: Hoop, Product Category: Sports
+Product number: 5, Name: Hat, Product Category: Clothes
+Product number: 2, Name: Don Quixote, Product Category: Literature
+Product number: 1, Name: Basketball, Product Category: Sports
+
+Inserting Shampoo into inventory...
+Inserting Chair into inventory...
+
+Printing all products currently available in our inventory:
+
+Product number: 15, Name: Shampoo, Product Category: Bathroom
+Product number: 10, Name: Hoop, Product Category: Sports
+Product number: 2, Name: Don Quixote, Product Category: Literature
+Product number: 1, Name: Basketball, Product Category: Sports
+
+Total products: 6
+Total available products: 4
+
+Searching for product with product number of 1...
+Product Found: Product number: 1, Name: Basketball, Product Category: Sports
+
+Searching for product with product number of 2...
+Product Found: Product number: 2, Name: Don Quixote, Product Category: Literature
+
+Searching for product with product number of 10...
+Product Found: Product number: 10, Name: Hoop, Product Category: Sports
+
+Searching for product with product number of 3...
+Product Found: Product number: 3, Name: Chair, Product Category: Furniture
+
+Searching for product with product number of 5...
+Product Found: Product number: 5, Name: Hat, Product Category: Clothes
+
+Searching for product with product number of 15...
+Product Found: Product number: 15, Name: Shampoo, Product Category: Bathroom
+
+Displaying the 5 most recent searched products:
+Product number: 15, Name: Shampoo, Product Category: Bathroom
+Product number: 5, Name: Hat, Product Category: Clothes
+Product number: 3, Name: Chair, Product Category: Furniture
+Product number: 10, Name: Hoop, Product Category: Sports
+Product number: 2, Name: Don Quixote, Product Category: Literature
+
+Thanks for using Hunter's Shop!
+
+
+
+
+This output occurs when you search for an item using an invalid product number (A good example followed by a bad one:
+
+Searching for product with product number of 2...
+Product Found: Product number: 2, Name: Don Quixote, Product Category: Literature
+
+Error: No product found with the product number of: 100
+
+
+
+
+This output occurs if the user displays the inventory that has no products in it:
+
+Printing all items in our inventory:
+
+Error: No items exist in inventory.
+
+
+
+This output occurs if five items have not been searched for:
+
+Searching for product with product number of 10...
+Product Found: Product number: 10, Name: Hoop, Product Category: Sports
+
+Displaying the 5 most recent searched products:
+Error: Cannot print because 5 products have not been searched
+
+
+This output occurs if the user tries to remove an item that is not in the inventory:
+
+Removing product with product number of 3...
+Error: Product cannot be removed because no product in the inventory has a product number of 150
+
+
+
+		private String toString(){
+				Iterator<Product> iter = list.iterator();
+				while (iter.hasNext()) {					//Goes through iterator
+					return "Product number: " + number + "," + " Name: " + name + "," + " Product Category: " + category;
+			}	
+			System.out.println("");
+			
+				private String companyName = "Hunter's Shop";
+
